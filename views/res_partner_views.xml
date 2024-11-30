@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_property_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.property.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <group name="accounting_entries" position="after">
+                    <group string="Currency/Accounts setting" name="currencies_accounts"
+                           groups="account.group_account_readonly">
+                        <field name="currency_property_accounts_ids" nolabel="1" colspan="2">
+                            <tree>
+                                <field name="currency_id" string="Currency"/>
+                                <field name="property_account_receivable_id" string="Receivable Account"/>
+                                <field name="property_account_payable_id" string="Payable Account"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="currency_id" string="Currency"/>
+                                        <field name="property_account_receivable_id" string="Receivable Account"/>
+                                        <field name="property_account_payable_id" string="Payable Account"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.account</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//block[@id='analytic']" position="after">
+                    <block title="Rounding Difference Configuration" id="rounding_difference">
+                        <setting id="enable_rounding_difference" title="Allows you to configure rounding difference."
+                                 groups="account.group_account_user"
+                                 help="Maximum amount allowed to be considered as Rounding Difference in the Base Currency balance control of journal entries. (Usually 0.04) It should only apply to entries where Debit/Credit were calculated from Foreign Currency amounts (there is at least one line in the entry with a currency different from the base currency).">
+                            <field name="rounding_difference_amount"/>
+                        </setting>
+                        <setting id="enable_rounding_difference_usd"
+                                 title="Allows you to configure usd rounding difference."
+                                 groups="account.group_account_user"
+                                 help="Maximum amount allowed to be considered as Rounding Difference in the USD balance control of accounting entries. (Usually 0.01)">
+                            <field name="rounding_difference_amount_usd"/>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

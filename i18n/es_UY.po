@@ -1,0 +1,231 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* opensur_challenge
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-12 11:04+0000\n"
+"PO-Revision-Date: 2024-12-12 11:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta por pagar"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta por cobrar"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.res_config_settings_view_form_inherit
+msgid "Allows you to configure rounding difference."
+msgstr "Permite configurar la diferencia de redondeo."
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.res_config_settings_view_form_inherit
+msgid "Allows you to configure usd rounding difference."
+msgstr "Permite configurar la diferencia de redondeo en USD."
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_move_line__balance_usd
+msgid "Balance USD"
+msgstr "Balance USD"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_bank_statement_line__base_currency_only
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_move__base_currency_only
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_payment__base_currency_only
+msgid "Base Currency Only"
+msgstr "Solo moneda base"
+
+#. module: opensur_challenge
+#: model:ir.model,name:opensur_challenge.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: opensur_challenge
+#: model:ir.model,name:opensur_challenge.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_move_line__credit_usd
+msgid "Credit USD"
+msgstr "Crédito USD"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__currency_id
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_partner_property_form_inherit
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: opensur_challenge
+#: model:ir.model,name:opensur_challenge.model_currency_property_accounts
+#: model:ir.model.fields,field_description:opensur_challenge.field_res_partner__currency_property_accounts_ids
+#: model:ir.model.fields,field_description:opensur_challenge.field_res_users__currency_property_accounts_ids
+msgid "Currency Property Accounts"
+msgstr "Cuentas/Moneda"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_partner_property_form_inherit
+msgid "Currency/Accounts setting"
+msgstr "Configuración de moneda/cuentas"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_move_inherit_usd_currency
+msgid ""
+"Dear user, please note that usd amounts are not balanced. Please\n"
+"                            verify before confirm."
+msgstr "Estimado usuario, tenga en cuenta que los montos en dólares no están equilibrados. Por favor, verifique antes de confirmar."
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_move_line__debit_usd
+msgid "Debit USD"
+msgstr "Débito USD"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__id
+msgid "ID"
+msgstr "ID"
+
+#. module: opensur_challenge
+#: model:ir.model,name:opensur_challenge.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: opensur_challenge
+#: model:ir.model,name:opensur_challenge.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,help:opensur_challenge.field_res_config_settings__rounding_difference_amount
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.res_config_settings_view_form_inherit
+msgid ""
+"Maximum amount allowed to be considered as Rounding Difference in the Base "
+"Currency balance control of journal entries. (Usually 0.04) It should only "
+"apply to entries where Debit/Credit were calculated from Foreign Currency "
+"amounts (there is at least one line in the entry with a currency different "
+"from the base currency)."
+msgstr "Cantidad máxima permitida para ser considerada como diferencia de redondeo en el control del saldo de la moneda base en los asientos contables. (Usualmente 0.04). Solo debería aplicarse a asientos donde el débito/crédito se calcularon a partir de montos en moneda extranjera (hay al menos una línea en el asiento con una moneda diferente a la moneda base)."
+
+#. module: opensur_challenge
+#: model:ir.model.fields,help:opensur_challenge.field_res_config_settings__rounding_difference_amount_usd
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.res_config_settings_view_form_inherit
+msgid ""
+"Maximum amount allowed to be considered as Rounding Difference in the USD "
+"balance control of accounting entries. (Usually 0.01)"
+msgstr "Cantidad máxima permitida para ser considerada como diferencia de redondeo en el control de saldo en USD de los asientos contables. (Usualmente 0.01)."
+
+#. module: opensur_challenge
+#: model:res.groups,name:opensur_challenge.group_manager_usd_entries
+msgid "Modify Debit USD and Credit USD in Journal Entries"
+msgstr "Modifica Debe USD y Haber USD en apuntes contables"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_currency_property_accounts__partner_id
+msgid "Partner"
+msgstr "Socio"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_partner_property_form_inherit
+msgid "Payable Account"
+msgstr "Cuenta por pagar"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_partner_property_form_inherit
+msgid "Receivable Account"
+msgstr "Cuenta por cobrar"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_res_config_settings__rounding_difference_amount
+msgid "Rounding Difference Amount"
+msgstr "Monto de diferencia de redondeo"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_res_config_settings__rounding_difference_amount_usd
+msgid "Rounding Difference Amount (USD)"
+msgstr "Monto de diferencia de redondeo (USD)"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.res_config_settings_view_form_inherit
+msgid "Rounding Difference Configuration"
+msgstr "Configuración de diferencia de redondeo"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_move_inherit_usd_currency
+msgid "Total Credit USD"
+msgstr "Crédito total en USD"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_move_inherit_usd_currency
+msgid "Total Debit USD"
+msgstr "Débito total en USD"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_move_line_tree_inherit_usd_currency
+msgid "Total USD Balance"
+msgstr "Saldo total en USD"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_move_line_tree_inherit_usd_currency
+msgid "Total USD Credit"
+msgstr "Crédito total en USD"
+
+#. module: opensur_challenge
+#: model_terms:ir.ui.view,arch_db:opensur_challenge.view_move_line_tree_inherit_usd_currency
+msgid "Total USD Debit"
+msgstr "Débito total en USD"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_bank_statement_line__usd_balance_warning
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_move__usd_balance_warning
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_payment__usd_balance_warning
+msgid "USD Amounts Not Balanced"
+msgstr "Los montos en USD no están equilibrados"
+
+#. module: opensur_challenge
+#: model:ir.model.fields,field_description:opensur_challenge.field_account_move_line__usd_readonly_condition
+msgid "USD Readonly Condition"
+msgstr "Condición de solo lectura en USD"
+
+#. module: opensur_challenge
+#. odoo-python
+#: code:addons/opensur_challenge/models/account_move.py:0
+#, python-format
+msgid "USD Amounts Not Balanced"
+msgstr "Los montos en USD no estan balanceados"
