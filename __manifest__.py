@@ -6,7 +6,8 @@
     'author': 'Kratochvil Claudio',
     'depends': ['account'],
     'data': [
-        'security/ir.model.access.csv',
+        'security/account_security.xml',
+        'views/account_move_views.xml',
     ],
     'installable': True,
     'application': True,

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_move_inherit_usd_currency" model="ir.ui.view">
+            <field name="name">account.move.inherit.usd.currency</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='credit']" position="after">
+                    <field name="usd_readonly_condition" column_invisible="1"/>
+                    <field name="debit_usd" sum="Total Debit USD"
+                           invisible="display_type in ('line_section', 'line_note')"
+                           readonly="usd_readonly_condition"/>
+                    <field name="credit_usd" sum="Total Credit USD"
+                           invisible="display_type in ('line_section', 'line_note')"
+                           readonly="usd_readonly_condition"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']/tree/field[@name='balance']" position="after">
+                    <field name="balance_usd" column_invisible="True"/>
+                </xpath>
+                <xpath expr="//div[@name='journal_div']" position="after">
+                    <field name="base_currency_only"/>
+                </xpath>
+                <xpath expr="//div[@class='alert alert-warning']"
+                       position="after">
+                    <field name="usd_balance_warning" invisible="1"/>
+                    <div class="alert alert-warning" role="alert" invisible="not usd_balance_warning">
+                        <p>Dear user, please note that usd amounts are not balanced. Please
+                            verify before confirm.
+                        </p>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_line_tree_inherit_usd_currency" model="ir.ui.view">
+            <field name="name">account.move.line.tree.inherit.usd.currency</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_move_line_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='credit']" position="after">
+                    <field name="debit_usd" sum="Total USD Debit" readonly="1"/>
+                    <field name="credit_usd" sum="Total USD Credit" readonly="1"/>
+                </xpath>
+                <xpath expr="//field[@name='balance']" position="after">
+                    <field name="balance_usd" sum="Total USD Balance " optional="hide" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_line_pivot_inherit_usd_currency" model="ir.ui.view">
+            <field name="name">account.move.line.pivot.inherit.usd.currency</field>
+            <field name="model">account.move.line</field>
+            <field name="inherit_id" ref="account.view_move_line_pivot"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='balance']" position="after">
+                    <field name="balance_usd" type="measure"/>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

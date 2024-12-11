@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="group_manager_usd_entries" model="res.groups">
+            <field name="name">Modify Debit USD and Credit USD in Journal Entries</field>
+            <field name="category_id" ref="base.module_category_accounting"/>
+        </record>
+
+        <record id="account_move_line_rule_usd_access" model="ir.rule">
+            <field name="name">Edit USD Debit and Credit</field>
+            <field name="model_id" ref="account.model_account_move_line"/>
+            <field name="groups" eval="[(4, ref('opensur_challenge.group_manager_usd_entries'))]"/>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="0"/>
+        </record>
+
+    </data>
+</odoo>
